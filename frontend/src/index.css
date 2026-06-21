@@ -1,0 +1,81 @@
+:root {
+  --navy: #0e2a3f;
+  --navy-light: #1c4259;
+  --teal: #0c8077;
+  --teal-light: #11a395;
+  --teal-soft: #e3f3f1;
+  --amber: #b5650d;
+  --amber-light: #e08a2e;
+  --amber-soft: #fbf0e3;
+
+  --bg: #f4f7f7;
+  --card: #ffffff;
+  --border: #dfe6e6;
+  --text: #1f2c30;
+  --text-mute: #5b6b6e;
+
+  --status-assigned: #6b7a8f;
+  --status-progress: #1d6fb8;
+  --status-completed: #1f8a4c;
+  --danger: #b3261e;
+
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(14, 42, 63, 0.08), 0 1px 2px rgba(14, 42, 63, 0.06);
+
+  font-family: 'Segoe UI', system-ui, Roboto, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--teal-soft);
+}
+
+/* shared across admin + technician pages */
+
+.page-header {
+    margin-bottom: 28px;
+}
+
+.page-header h1 {
+    margin: 0 0 4px;
+    font-size: 24px;
+    color: var(--navy);
+}
+
+.page-header p {
+    margin: 0;
+    color: var(--text-mute);
+    font-size: 14.5px;
+}
+
+.empty-note {
+    color: var(--text-mute);
+    font-size: 14px;
+}

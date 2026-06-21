@@ -1,0 +1,308 @@
+.tech-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ---------- sidebar (amber accent, distinct from admin navy/teal) ---------- */
+
+.tech-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    background: #20262b;
+    color: #e9eceb;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 18px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.tech-sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.tech-sidebar-logo-mark {
+    background: var(--amber);
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.tech-sidebar-role {
+    color: #9aa3a1;
+    font-size: 12px;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.tech-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 36px;
+    flex: 1;
+}
+
+.tech-sidebar-nav a {
+    text-decoration: none;
+    color: #c9cfce;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    font-weight: 500;
+}
+
+.tech-sidebar-nav a:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+}
+
+.tech-sidebar-nav a.active {
+    background: var(--amber);
+    color: #fff;
+}
+
+.tech-sidebar-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 16px;
+}
+
+.tech-sidebar-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.tech-sidebar-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--amber-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.tech-sidebar-user-name {
+    font-size: 13.5px;
+    font-weight: 600;
+}
+
+.tech-sidebar-user-email {
+    font-size: 11.5px;
+    color: #9aa3a1;
+}
+
+.tech-sidebar-logout {
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #e9eceb;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.tech-sidebar-logout:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- content ---------- */
+
+.tech-content {
+    flex: 1;
+    padding: 32px 40px;
+}
+
+/* stat cards reuse admin's .stat-grid / .stat-card classes via shared tokens,
+   but technician pages don't import Admin.css, so we redeclare the bits we use */
+
+.tech-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.tech-stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    box-shadow: var(--shadow);
+}
+
+.tech-stat-card .stat-value {
+    font-size: 30px;
+    font-weight: 700;
+    color: #20262b;
+}
+
+.tech-stat-card .stat-label {
+    font-size: 13px;
+    color: var(--text-mute);
+    margin-top: 4px;
+}
+
+.tech-stat-card.accent .stat-value {
+    color: var(--amber);
+}
+
+/* ---------- order cards ---------- */
+
+.order-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.order-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.order-card-main {
+    flex: 1;
+    min-width: 220px;
+}
+
+.order-card-hospital {
+    font-size: 16px;
+    font-weight: 700;
+    color: #20262b;
+}
+
+.order-card-sub {
+    font-size: 13px;
+    color: var(--text-mute);
+    margin-top: 2px;
+}
+
+.order-card-meta {
+    display: flex;
+    gap: 18px;
+    margin-top: 10px;
+    font-size: 12.5px;
+    color: var(--text-mute);
+}
+
+.order-card-remarks {
+    margin-top: 10px;
+    font-size: 13px;
+    background: #f5f7f7;
+    border-radius: 6px;
+    padding: 8px 10px;
+    color: var(--text);
+}
+
+.order-card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    min-width: 220px;
+}
+
+.tech-action-btn {
+    border: none;
+    padding: 9px 16px;
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tech-action-btn.start {
+    background: var(--status-progress);
+}
+
+.tech-action-btn.start:hover {
+    background: #1559a0;
+}
+
+.tech-action-btn.complete {
+    background: var(--status-completed);
+}
+
+.tech-action-btn.complete:hover {
+    background: #166b40;
+}
+
+.remarks-box {
+    width: 100%;
+    max-width: 260px;
+}
+
+.remarks-box textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 13px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 60px;
+}
+
+.tech-filter-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.tech-filter-row button {
+    border: 1px solid var(--border);
+    background: var(--card);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-mute);
+}
+
+.tech-filter-row button.active {
+    background: #20262b;
+    color: #fff;
+    border-color: #20262b;
+}
+
+
+
+
+.tech-sidebar-delete {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #dc2626;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tech-sidebar-delete:hover {
+    background-color: #b91c1c;
+}
