@@ -167,3 +167,106 @@
         display: none;
     }
 }
+
+
+
+
+/* ===========================================
+   ADDITIONAL MOBILE BREAKPOINTS — ADD ONLY
+   (Existing @media (max-width: 840px) stays as is)
+   =========================================== */
+
+@media (max-width: 840px) {
+    .login-side-mark {
+        font-size: 220px;
+        top: -40px;
+        right: -30px;
+    }
+
+    .login-side h1 {
+        font-size: 30px;
+    }
+
+    .login-side p {
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+
+    .login-form-wrap {
+        padding: 28px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-side {
+        padding: 30px 22px;
+    }
+
+    .login-side-mark {
+        font-size: 150px;
+        top: -20px;
+        right: -20px;
+    }
+
+    .login-side h1 {
+        font-size: 24px;
+    }
+
+    .login-side p {
+        font-size: 13.5px;
+    }
+
+    .login-form-wrap {
+        padding: 20px 14px;
+    }
+
+    .login-form {
+        max-width: 100%;
+        padding: 26px 20px;
+        border-radius: 10px;
+    }
+
+    .login-form h2 {
+        font-size: 19px;
+    }
+
+    .login-sub {
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+
+    .login-form input {
+        padding: 10px 11px;
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+
+    .login-form button {
+        padding: 11px;
+        font-size: 14px;
+    }
+
+    .login-error {
+        font-size: 13px;
+        padding: 9px 10px;
+        margin-bottom: 14px;
+    }
+
+    .login-hint {
+        font-size: 11.5px;
+    }
+}
+
+@media (max-width: 360px) {
+    .login-side-mark {
+        display: none;
+    }
+
+    .login-side h1 {
+        font-size: 21px;
+    }
+
+    .login-form {
+        padding: 22px 16px;
+    }
+}
