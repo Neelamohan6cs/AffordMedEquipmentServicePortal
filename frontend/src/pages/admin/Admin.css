@@ -443,3 +443,209 @@
     border-radius: 6px;
     font-size: 13.5px;
 }
+
+
+
+
+
+
+
+/* ===========================================
+   MOBILE RESPONSIVE STYLES — ADD ONLY
+   (Does not modify existing desktop rules)
+   =========================================== */
+
+@media (max-width: 1024px) {
+    .admin-content {
+        padding: 24px 20px;
+    }
+
+    .order-form-card {
+        max-width: 100%;
+        padding: 22px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* ---------- layout becomes stacked ---------- */
+    .admin-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 16px;
+        flex-wrap: wrap;
+    }
+
+    .sidebar-logo {
+        font-size: 17px;
+    }
+
+    .sidebar-role {
+        display: none;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 0;
+        gap: 6px;
+        flex: none;
+        width: 100%;
+        order: 3;
+        padding-top: 10px;
+        overflow-x: auto;
+    }
+
+    .sidebar-nav a {
+        font-size: 13px;
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
+
+    .sidebar-bottom {
+        border-top: none;
+        padding-top: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sidebar-user {
+        margin-bottom: 0;
+    }
+
+    .sidebar-logout {
+        width: auto;
+        padding: 8px 12px;
+    }
+
+    /* ---------- content ---------- */
+    .admin-content {
+        padding: 18px 14px;
+    }
+
+    /* ---------- stat cards ---------- */
+    .stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .stat-card {
+        padding: 14px 16px;
+    }
+
+    .stat-card .stat-value {
+        font-size: 24px;
+    }
+
+    .dashboard-section {
+        padding: 16px 14px;
+    }
+
+    /* ---------- due list ---------- */
+    .due-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 10px 0;
+    }
+
+    /* ---------- order form ---------- */
+    .order-form-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .order-form-grid .full-width {
+        grid-column: 1;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* ---------- list toolbar ---------- */
+    .list-toolbar {
+        flex-direction: column;
+    }
+
+    .list-toolbar input,
+    .list-toolbar select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* ---------- orders table -> card layout ---------- */
+    .orders-table-wrap {
+        overflow-x: auto;
+    }
+
+    .orders-table {
+        min-width: 600px;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .action-btn {
+        padding: 5px 9px;
+        font-size: 11.5px;
+        margin-right: 4px;
+    }
+
+    /* ---------- modal ---------- */
+    .modal-card {
+        max-width: 92%;
+        padding: 20px 18px;
+    }
+
+    .modal-actions {
+        flex-direction: column-reverse;
+        gap: 8px;
+    }
+
+    .modal-actions .btn-primary,
+    .modal-actions .btn-ghost {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-user-email {
+        display: none;
+    }
+
+    .sidebar-avatar {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .modal-card {
+        padding: 18px 14px;
+    }
+}

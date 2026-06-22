@@ -12,7 +12,10 @@ const connectDb=require("./config/db")
 connectDb();
 
 app.use(cors({
-    origin: "http://localhost:5173"
+    origin: [
+    "http://localhost:5173",
+    "https://affordmedservice.vercel.app"
+  ]
 }));
 
 const adminRoutes=require("./routes/admin");

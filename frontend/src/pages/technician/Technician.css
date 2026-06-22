@@ -290,19 +290,174 @@
 
 
 
-.tech-sidebar-delete {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    background-color: #dc2626;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
+
+/* ===========================================
+   MOBILE RESPONSIVE STYLES — ADD ONLY
+   (Does not modify existing desktop rules)
+   =========================================== */
+
+@media (max-width: 1024px) {
+    .tech-content {
+        padding: 24px 20px;
+    }
 }
 
-.tech-sidebar-delete:hover {
-    background-color: #b91c1c;
+@media (max-width: 768px) {
+
+    /* ---------- layout becomes stacked ---------- */
+    .tech-layout {
+        flex-direction: column;
+    }
+
+    .tech-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 16px;
+        flex-wrap: wrap;
+    }
+
+    .tech-sidebar-logo {
+        font-size: 17px;
+    }
+
+    .tech-sidebar-role {
+        display: none;
+    }
+
+    .tech-sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 0;
+        gap: 6px;
+        flex: none;
+        width: 100%;
+        order: 3;
+        padding-top: 10px;
+        overflow-x: auto;
+    }
+
+    .tech-sidebar-nav a {
+        font-size: 13px;
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
+
+    .tech-sidebar-bottom {
+        border-top: none;
+        padding-top: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .tech-sidebar-user {
+        margin-bottom: 0;
+    }
+
+    .tech-sidebar-logout {
+        width: auto;
+        padding: 8px 12px;
+    }
+
+    /* ---------- content ---------- */
+    .tech-content {
+        padding: 18px 14px;
+    }
+
+    /* ---------- stat cards ---------- */
+    .tech-stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .tech-stat-card {
+        padding: 14px 16px;
+    }
+
+    .tech-stat-card .stat-value {
+        font-size: 24px;
+    }
+
+    /* ---------- order cards ---------- */
+    .order-card {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px 16px;
+        gap: 14px;
+    }
+
+    .order-card-main {
+        min-width: 0;
+    }
+
+    .order-card-hospital {
+        font-size: 15px;
+    }
+
+    .order-card-meta {
+        flex-wrap: wrap;
+        gap: 10px 16px;
+    }
+
+    .order-card-actions {
+        align-items: stretch;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .tech-action-btn {
+        width: 100%;
+        text-align: center;
+        padding: 10px 14px;
+    }
+
+    .remarks-box {
+        max-width: 100%;
+    }
+
+    /* ---------- filter row ---------- */
+    .tech-filter-row {
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        flex-wrap: nowrap;
+    }
+
+    .tech-filter-row button {
+        flex-shrink: 0;
+        padding: 7px 14px;
+        font-size: 12.5px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-sidebar-user-email {
+        display: none;
+    }
+
+    .tech-sidebar-avatar {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .order-card-meta {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .order-card-remarks {
+        font-size: 12.5px;
+        padding: 7px 9px;
+    }
 }
